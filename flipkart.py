@@ -4,17 +4,17 @@ from selenium.webdriver.common.keys import Keys
 #from selenium.webdriver.common.action_chains import ActionChains
 import time
 import string
-chromedriver=r"C:\Users\DHANU\Downloads\chromedriver"
+chromedriver=r"C:\Users\DHANU\Downloads\chromedriver" #your path of chromedriver
 driver = webdriver.Chrome(chromedriver)
 act = ActionChains(driver)
 
 driver.get('https://flipkart.com/')
 
 user = driver.find_element_by_class_name('_2zrpKA')
-user.send_keys('')
+user.send_keys('#username in flipkart website')
 
 passd=  driver.find_element_by_xpath("//input[@type='password']")
-passd.send_keys('')
+passd.send_keys('#password in flipkart website')
 
 
 button = driver.find_element_by_xpath("//button[@class='_2AkmmA _1LctnI _7UHT_c']")
